@@ -1,35 +1,45 @@
 {
-  "name": "reactlet-demo",
-  "version": "0.1.0",
-  "description": "",
-  "repository": "",
-  "main": "js/app.js",
-  "dependencies": {
-    "bootstrap": "",
-    "jquery": "^2.1.3",
-    "validate.js": "~0.4.0",
-    "font-awesome": "^4.3.0",
-    "flux": "^2.0.1",
-    "keymirror": "~0.1.0",
-    "object-assign": "^1.0.0",
-    "react": "^0.12.0"
-  },
-  "devDependencies": {
-    "browserify": "^6.2.0",
-    "envify": "^3.0.0",
-    "reactify": "^0.15.2",
-    "uglify-js": "~2.4.15",
-    "watchify": "^2.1.1"
-  },
-  "scripts": {
-    "start": "node",
-    "build": "node"
-  },
-  "author": "Yue Liu",
-  "browserify": {
-    "transform": [
-      "reactify",
-      "envify"
-    ]
-  }
+    "name": "reactlet-demo",
+    "version": "0.1.0",
+    "description": "",
+    "repository": "",
+    "main": "js/app.js",
+    "dependencies": {
+        "express": "~4.2.0",
+        "express-session": "^1.7.6",
+        "underscore": "~1.6.0",
+        "static-favicon": "~1.0.0",
+        "morgan": "~1.0.0",
+        "cookie-parser": "~1.0.1",
+        "body-parser": "~1.0.0",
+        "debug": "~0.7.4",
+        "consolidate": "~0.10.0",
+        "moment": "~2.7.0",
+        "async": "~0.9.0",
+        "swig": "~1.4.1",
+        "validate.js": "~0.4.0",
+        "compression": "~1.0.8",
+        "bootstrap": "^3.*",
+        "jquery": "^2.1.3",
+        "font-awesome": "^4.3.0",
+        "flux": "^2.0.1",
+        "react": "^0.12.0"
+    },
+    "devDependencies": {
+        "browserify": "^6.2.0",
+        "envify": "^3.0.0",
+        "reactify": "^0.15.2",
+        "uglify-js": "~2.4.15",
+        "watchify": "^2.1.1"
+    },
+    "scripts": {
+        "start": "node ./site/bin/www"
+    },
+    "author": "Yue Liu",
+    "browserify": {
+        "transform": [
+            "reactify",
+            "envify"
+        ]
+    }
 }
