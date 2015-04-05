@@ -1,14 +1,24 @@
 {% extends '../layout/layout.html' %}
 
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/common/reactlet-common.css">
+{% endblock %}
 
+{% block script %}
+{% parent %}
+<script src="/script/common/reactlet-mixin.js"></script>
+<script src="/script/reactlet/dist/treeview.js"></script>
+{% endblock %}
 
 {% block content %}
 <div class="body-container container">
+    
     <div class="row">
         <div class="col-md-12">
             <h4>Rectlet Treeview</h4>
         </div>
-        
     </div>
+    
 </div>
 {% endblock %}

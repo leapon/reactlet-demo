@@ -1,0 +1,17 @@
+# convert components
+
+echo "build components ..."
+cd node_modules
+./build-components
+
+# build bundle files for distribution
+
+cd ..
+echo "build bundle files ..."
+
+#browserify -o script/web/dist/index.js -d script/web/src/index.js
+#browserify -o script/reactlet/dist/index.js -d script/reactlet/src/index.js
+browserify -o script/reactlet/dist/treeview.js -d script/reactlet/src/treeview.js
+
+# end of build
+echo "build is done"
