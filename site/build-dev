@@ -1,0 +1,21 @@
+# convert components
+
+echo "build components ..."
+cd node_modules
+./build-components
+
+# build bundle files for distribution
+
+cd ..
+echo "build bundle files ..."
+
+browserify -o script/web/dist/index.js -d script-build/web/index.js
+
+browserify -o script/stack/dist/explorer.js -d script-build/stack/explorer.js
+browserify -o script/stack/dist/create.js -d script-build/stack/create.js
+browserify -o script/stack/dist/detail.js -d script-build/stack/detail.js
+
+browserify -o script/aws/dist/index.js -d script-build/aws/index.js
+
+# end of build
+echo "build is done"
