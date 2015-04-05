@@ -2,13 +2,15 @@
 
 {% block style %}
 {% parent %}
-<link rel="stylesheet" href="/style/common/reactlet-common.css">
+<link rel="stylesheet" href="/style/common/reactlet-common.css" />
+<link rel="stylesheet" href="/node_modules/reactlet-treeview/dist/treeview.css" />
 {% endblock %}
 
 {% block script %}
 {% parent %}
 <script src="/script/common/reactlet-mixin.js"></script>
 <script src="/script/reactlet/dist/treeview.js"></script>
+
 {% endblock %}
 
 {% block content %}
@@ -17,6 +19,12 @@
     <div class="row">
         <div class="col-md-12">
             <h4>Rectlet Treeview</h4>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div id="treeview1"></div>
         </div>
     </div>
     
