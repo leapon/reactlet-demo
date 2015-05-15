@@ -43,8 +43,8 @@ app.table2Data = {
         { id:'P23', name:'chip', price:2.13, description:'potato chip', extra:'n/a' },
         { id:'P54', name:'sauce', price:1.89, description:'dipping sauce', extra:'n/a' },
         { id:'P81', name:'corn', price:4.59, description:'fresh pear', extra:'n/a' },
-        { id:'P73', name:'chip', price:2.12, description:'potato chip', extra:'n/a' },
-        { id:'P24', name:'sauce', price:1.81, description:'meat sauce', extra:'n/a' },
+        { id:'P73', name:'vegi', price:2.12, description:'potato', extra:'n/a' },
+        { id:'P24', name:'vegi', price:1.81, description:'eggplant', extra:'n/a' },
         { id:'P91', name:'corn', price:4.99, description:'fresh aple', extra:'n/a' },
         { id:'P20', name:'chip', price:2.15, description:'potato chip', extra:'n/a' },
         { id:'P52', name:'sauce', price:1.82, description:'dipping sauce', extra:'n/a' },
@@ -64,7 +64,7 @@ app.table2Data = {
     ],
     paging: {
         size: 10,
-        page: 1
+        page: 2
     }
 };
 
