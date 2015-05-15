@@ -1,0 +1,32 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/common/reactlet-common.css" />
+<link rel="stylesheet" href="/node_modules/reactlet-table/dist/table.css" />
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/common/reactlet-mixin.js"></script>
+<script src="/script/reactlet/dist/table.js"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="body-container container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Rectlet Table</h4>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div id="table1"></div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
