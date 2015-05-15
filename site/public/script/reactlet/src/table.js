@@ -70,12 +70,12 @@ app.table2Data = {
 
 $().ready(function() {
     // table1
-    app.table1 = React.renderComponent(
+    app.table1 = React.render(
         <Table data={ app.table1Data } />,
         document.getElementById('table1')
     );
     // table2 with paging
-    app.table2 = React.renderComponent(
+    app.table2 = React.render(
         <Table data={ app.table2Data } />,
         document.getElementById('table2')
     );
