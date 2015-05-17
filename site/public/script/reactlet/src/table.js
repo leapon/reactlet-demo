@@ -83,6 +83,6 @@ $().ready(function() {
     );
     app.table2.on('table-row-click', function(event) {
         var id = event.id;
-        console.log('row click - id:', id);
+        console.log('row click - id:', id, 'table active item id:', app.table2.state.activeItemId);
     });
 });
