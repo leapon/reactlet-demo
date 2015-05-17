@@ -10,10 +10,11 @@ app.getIdText = function(id) {
     return 'ID-' + id;
 }
 
+// table1Data has no key column defined
 app.table1Data = {
     boxClass: 'table-container-bordered',
     colModel: {
-        id: { name:'id', text:'ID', width:'15%', key:true, format:app.getIdText },
+        id: { name:'id', text:'ID', width:'15%', format:app.getIdText },
         name: { name:'name', text:'Name', width:'20%', sort:'up' },
         price: { name:'price', text:'Price', width:'15%', type:'money' },
         description: { name:'description', text:'Description', width:'30%' },
@@ -28,6 +29,7 @@ app.table1Data = {
     ]
 };
 
+// table2Data has 'id' column as key column
 app.table2Data = {
     boxClass: 'table-container-bordered',
     colModel: {
@@ -79,4 +81,8 @@ $().ready(function() {
         <Table data={ app.table2Data } />,
         document.getElementById('table2')
     );
+    app.table2.on('table-row-click', function(event) {
+        var id = event.id;
+        console.log('row click - id:', id);
+    });
 });
