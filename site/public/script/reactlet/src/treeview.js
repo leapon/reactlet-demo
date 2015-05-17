@@ -45,7 +45,7 @@ app.tree1Data = {
 };
 
 $().ready(function() {
-    app.treeview1 = React.renderComponent(
+    app.treeview1 = React.render(
         <Treeview data={ app.tree1Data } />,
         document.getElementById('treeview1')
     );
