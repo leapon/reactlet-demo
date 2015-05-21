@@ -1,0 +1,39 @@
+{% extends '../layout/layout.html' %}
+
+{% block style %}
+{% parent %}
+<link rel="stylesheet" href="/style/common/reactlet-common.css" />
+<link rel="stylesheet" href="/node_modules/reactlet-calendar/dist/calendar.css" />
+{% endblock %}
+
+{% block script %}
+{% parent %}
+<script src="/script/common/reactlet-mixin.js"></script>
+<script src="/script/reactlet/dist/calendar.js"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="body-container container">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Rectlet Calendar</h4>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-12">
+            <div style="font-size:1.1em;">Calendar</div>
+            <div id="calendar1"></div>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-12">
+            <div style="font-size:1.1em;">Calendar 2</div>
+            <div id="calendar2"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

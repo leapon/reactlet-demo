@@ -13,6 +13,7 @@ echo "build bundle files ..."
 #browserify -o script/reactlet/dist/index.js -d script/reactlet/src/index.js
 browserify -o script/reactlet/dist/treeview.js -d script/reactlet/src/treeview.js
 browserify -o script/reactlet/dist/table.js -d script/reactlet/src/table.js
+browserify -o script/reactlet/dist/calendar.js -d script/reactlet/src/calendar.js
 
 # end of build
 echo "build is done"
