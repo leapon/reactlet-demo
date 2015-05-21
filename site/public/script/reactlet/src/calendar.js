@@ -76,6 +76,25 @@ $().ready(function() {
     
     console.log('in calendar page');
     
+    // calendar1
+    app.componentData = {
+        year: 2014,
+        month:9
+    };
+    app.calendar1 = React.render(
+        <Calendar data={ app.componentData } />,
+        document.getElementById('calendar1')
+    );
+
+    // calendar2
+    app.componentData = {
+        year: 2015,
+        month:5
+    };
+    app.calendar2 = React.render(
+        <Calendar data={ app.componentData } />,
+        document.getElementById('calendar2')
+    );
     /*
     // table1
     app.table1 = React.render(

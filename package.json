@@ -23,10 +23,10 @@
         "jquery": "^2.1.3",
         "font-awesome": "^4.3.0",
         "flux": "^2.0.1",
-        "react": "*"
+        "react": "~0.13.0"
     },
     "devDependencies": {
-        "browserify": "^6.2.0",
+        "browserify": "*",
         "envify": "^3.0.0",
         "reactify": "*",
         "uglify-js": "~2.4.15",
