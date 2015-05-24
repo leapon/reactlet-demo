@@ -29,15 +29,34 @@ app.table1Data = {
     ]
 };
 
-// table2Data has 'id' column as key column
+// table1Data has no key column defined
 app.table2Data = {
     boxClass: 'table-container-bordered',
     colModel: {
-        id: { name:'id', text:'ID', width:'15%', key:true, format:app.getIdText },
-        name: { name:'name', text:'Name', width:'20%', sort:'up' },
-        price: { name:'price', text:'Price', width:'15%', type:'money' },
-        description: { name:'description', text:'Description', width:'30%' },
-        extra: { name:'extra', text:'Extra', show:false, width:'10%' }
+        id: { name:'id', text:'ID', flex:1, format:app.getIdText },
+        name: { name:'name', text:'Name', flex:2, sort:'up' },
+        price: { name:'price', text:'Price', flex:2, type:'money' },
+        description: { name:'description', text:'Description', flex:4 },
+        extra: { name:'extra', text:'Extra', show:false, flex:2 }
+    },
+    dataItems:[
+        { id:'P01', name:'egg', price:7, description:'fresh egg', extra:'n/a' },
+        { id:'P21', name:'bread', price:2.99, description:'whole grain bread', extra:'n/a' },
+        { id:'P23', name:'chip', price:2.1, description:'potato chip', extra:'n/a' },
+        { id:'P54', name:'sauce', price:1.89, description:'dipping sauce', extra:'n/a' },
+        { id:'P81', name:'corn', price:4.59, description:'fresh corn', extra:'n/a' }
+    ]
+};
+
+// table3Data has 'id' column as key column
+app.table3Data = {
+    boxClass: 'table-container-bordered',
+    colModel: {
+        id: { name:'id', text:'ID', key:true, format:app.getIdText },
+        name: { name:'name', text:'Name', sort:'up' },
+        price: { name:'price', text:'Price', type:'money' },
+        description: { name:'description', text:'Description' },
+        extra: { name:'extra', text:'Extra', show:false }
     },
     dataItems:[
         { id:'P01', name:'egg', price:5.98, description:'fresh egg', extra:'n/a' },
@@ -76,12 +95,17 @@ $().ready(function() {
         <Table data={ app.table1Data } />,
         document.getElementById('table1')
     );
-    // table2 with paging
+    // table2
     app.table2 = React.render(
         <Table data={ app.table2Data } />,
         document.getElementById('table2')
     );
-    app.table2.on('table-row-click', function(event) {
+    // table3 with paging
+    app.table3 = React.render(
+        <Table data={ app.table3Data } />,
+        document.getElementById('table3')
+    );
+    app.table3.on('table-row-click', function(event) {
         var id = event.id;
         console.log('row click - id:', id, 'table active item id:', app.table2.state.activeItemId);
     });
