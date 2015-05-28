@@ -10,6 +10,23 @@ app.getIdText = function(id) {
     return 'ID-' + id;
 }
 
+// table0Data
+// { id:'P01', name:'egg', price:7, description:'fresh egg', extra:'n/a' },
+app.table0Data = {
+    boxClass: 'table-container-bordered',
+    colModel: {
+        name: { name:'name', text:'Name', width:'40%' },
+        value: { name:'value', text:'Value', width:'60%' }
+    },
+    dataItems:[
+        { name:'id', value:'P01' },
+        { name:'name', value:'egg' },
+        { name:'price', value:'7' },
+        { name:'description', value:'fresh egg' },
+        { name:'extra', value:'n/a' }
+    ]
+};
+
 // table1Data has no key column defined
 app.table1Data = {
     boxClass: 'table-container-bordered',
@@ -90,6 +107,11 @@ app.table3Data = {
 };
 
 $().ready(function() {
+    // table0
+    app.table0 = React.render(
+        <Table data={ app.table0Data } />,
+        document.getElementById('table0')
+    );
     // table1
     app.table1 = React.render(
         <Table data={ app.table1Data } />,
