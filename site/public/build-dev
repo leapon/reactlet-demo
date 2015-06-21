@@ -16,9 +16,9 @@ browserify -o script/reactlet/dist/html_input.js -d script/reactlet/src/html_inp
 browserify -o script/reactlet/dist/html_select.js -d script/reactlet/src/html_select.js
 browserify -o script/reactlet/dist/html_form.js -d script/reactlet/src/html_form.js
 
-browserify -o script/reactlet/dist/treeview.js -d script/reactlet/src/treeview.js
-browserify -o script/reactlet/dist/table.js -d script/reactlet/src/table.js
-browserify -o script/reactlet/dist/calendar.js -d script/reactlet/src/calendar.js
+#browserify -o script/reactlet/dist/treeview.js -d script/reactlet/src/treeview.js
+#browserify -o script/reactlet/dist/table.js -d script/reactlet/src/table.js
+#browserify -o script/reactlet/dist/calendar.js -d script/reactlet/src/calendar.js
 
 
 # end of build
